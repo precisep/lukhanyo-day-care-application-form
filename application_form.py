@@ -3,9 +3,9 @@ from pymongo import MongoClient
 import os
 
 
-headers = {
-  "authorization" : st.secrets["db_uri"]
-}
+#headers = {
+#  "authorization" : st.secrets["db_uri"]
+#}
 
 client = MongoClient("mongodb+srv://precisep:thabangpardon@cluster0.vspkrgk.mongodb.net/?retryWrites=true&w=majority")
 
