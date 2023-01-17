@@ -62,7 +62,6 @@ footer:before{
 </style>
 """, unsafe_allow_html=True)
 
-
 #using strimlit form to collect data from user
 with st.form('data_form', clear_on_submit=True):
     st.image("logo.png", width=680)
@@ -109,6 +108,7 @@ with st.form('data_form', clear_on_submit=True):
 
     #with open('Lukhanyo Inc (Final).pdf', "rb") as file:
     #    button = st.download_button('Download Contract',data = file, file_name='Lukhanyo Inc (Final).pdf', on_click=None)
+
     if st.form_submit_button("Submit"):
         if not child_name:
             st.error("Child Name is a required field")
@@ -155,3 +155,5 @@ with st.form('data_form', clear_on_submit=True):
             }
             submissions.insert_one(submission)
             st.success("Thank you! The application form submission received!!!")
+
+
