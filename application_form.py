@@ -47,6 +47,18 @@ div.stButton > button:hover {
     background-color: #FF4B4B;
     color:#000000;
     }
+#MainMenu {
+    visibility: hidden;
+    }
+footer {
+    visibility: visible;
+}
+footer:before{
+    content:'Copyright (c) 2023: Immensity Holdings';
+    display:block;
+    position:relative;
+    color:#D33639;
+}
 </style>
 """, unsafe_allow_html=True)
 
