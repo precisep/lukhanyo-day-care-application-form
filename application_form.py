@@ -109,51 +109,51 @@ with st.form('data_form', clear_on_submit=True):
 
     #with open('Lukhanyo Inc (Final).pdf', "rb") as file:
     #    button = st.download_button('Download Contract',data = file, file_name='Lukhanyo Inc (Final).pdf', on_click=None)
-  if st.form_submit_button("Submit"):
-    if not child_name:
-        st.error("Child Name is a required field")
-    elif not child_dob:
-        st.error("Child Date of Birth is a required field")
-    elif not child_gender:
-        st.error("Child Gender is a required field")
-    elif not parent1_name:
-        st.error("Parent Name is a required field")
-    elif not parent1_email:
-        st.error("Parent Email is a required field")
-    elif not parent1_phone:
-        st.error("Parent Phone is a required field")
-    else:
-        # Store the submission in MongoDB
+   if st.form_submit_button("Submit"):
+      if not child_name:
+          st.error("Child Name is a required field")
+      elif not child_dob:
+          st.error("Child Date of Birth is a required field")
+      elif not child_gender:
+          st.error("Child Gender is a required field")
+      elif not parent1_name:
+          st.error("Parent Name is a required field")
+      elif not parent1_email:
+          st.error("Parent Email is a required field")
+      elif not parent1_phone:
+          st.error("Parent Phone is a required field")
+      else:
+          # Store the submission in MongoDB
 
-        submission = {
-            "child_name": child_name,
-            "child_dob": dob_object,
-            "child_id": child_id,
-            "child_language": child_language,
-            "child_gender": child_gender,
-            "mother_name": parent1_name,
-            "mother_id": parent1_id,
-            "mother_email": parent1_email,
-            "mother_phone": parent1_phone,
-            "mother_work": parent1_work,
-            "mother_home": parent1_home,
-            "mother_income": parent1_income,
-            "father_name": parent2_name,
-            "father_id": parent2_id,
-            "father_email": parent2_email,
-            "father_phone": parent2_phone,
-            "father_work": parent2_work,
-            "father_home": parent2_home,
-            "father_income": parent2_income,
-            "doctor_name": doctor_name,
-            "doctor_number": doctor_number,
-            "emergency_number": emergency_number,
-            "allergies": allergies,
-            "medications": medications,
-            "vaccinations": vaccinations,
-            "school_fees_aggreement": school_fees
-        }
-        submissions.insert_one(submission)
-        st.success("Thank you! The application form submission received!!!")
+          submission = {
+              "child_name": child_name,
+              "child_dob": dob_object,
+              "child_id": child_id,
+              "child_language": child_language,
+              "child_gender": child_gender,
+              "mother_name": parent1_name,
+              "mother_id": parent1_id,
+              "mother_email": parent1_email,
+              "mother_phone": parent1_phone,
+              "mother_work": parent1_work,
+              "mother_home": parent1_home,
+              "mother_income": parent1_income,
+              "father_name": parent2_name,
+              "father_id": parent2_id,
+              "father_email": parent2_email,
+              "father_phone": parent2_phone,
+              "father_work": parent2_work,
+              "father_home": parent2_home,
+              "father_income": parent2_income,
+              "doctor_name": doctor_name,
+              "doctor_number": doctor_number,
+              "emergency_number": emergency_number,
+              "allergies": allergies,
+              "medications": medications,
+              "vaccinations": vaccinations,
+              "school_fees_aggreement": school_fees
+          }
+          submissions.insert_one(submission)
+          st.success("Thank you! The application form submission received!!!")
 
 
